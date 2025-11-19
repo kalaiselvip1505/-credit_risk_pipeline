@@ -1,34 +1,19 @@
-# -credit_risk_pipeline
-Credit Risk Model with SHAP, LIME, and XGBoost - Explainable AI Project
-# Credit Risk Prediction — SHAP & LIME Interpretability
+This directory includes a few sample datasets to get you started.
 
-## Project overview
-This repository contains a credit risk prediction pipeline (XGBoost) together with global (SHAP) and local (LIME) interpretability outputs. The goal is to predict loan default and provide both population-level feature importance and case-level explanations for borderline decisions.
+*   `california_housing_data*.csv` is California housing data from the 1990 US
+    Census; more information is available at:
+    https://docs.google.com/document/d/e/2PACX-1vRhYtsvc5eOR2FWNCwaBiKL6suIOrxJig8LcSBbmCbyYsayia_DvPOOBlXZ4CAlQ5nlDD8kTaIDRwrN/pub
 
-## Contents (important files)
-- `credit_risk_full_code.py` — main runnable pipeline (training, SHAP, LIME).
-- `model_metrics.txt` — test metrics summary.
-- `final_report.md` — full interpretability report (global vs local explanations & policy implications).
-- `interpretation_report.txt` — detailed text report generated during run. (local path: `/mnt/data/interpretation_report.txt`)
-- `lime_local_explanations.csv` — local LIME explanations CSV. (local path: `/mnt/data/lime_local_explanations.csv`)
-- `final_model.pkl` — saved XGBoost model. (local path: `/mnt/data/final_model.pkl`)
-- `shap_sample.npz` — saved SHAP values sample. (local path: `/mnt/data/shap_sample.npz`)
-- `images/` — SHAP and LIME PNGs (if present).
+*   `mnist_*.csv` is a small sample of the
+    [MNIST database](https://en.wikipedia.org/wiki/MNIST_database), which is
+    described at: http://yann.lecun.com/exdb/mnist/
 
-> **Note:** Files referenced with `/mnt/data/...` are the artifacts created in your Colab environment — download them from Colab and upload to this repo (see Upload instructions below).
+*   `anscombe.json` contains a copy of
+    [Anscombe's quartet](https://en.wikipedia.org/wiki/Anscombe%27s_quartet); it
+    was originally described in
 
-## Quick stats (from latest run)
-See `model_metrics.txt` for full numbers. Short summary:
-- AUC: 0.5700
-- F1: 0.0000
-- Precision: 0.0000
-- Recall: 0.0000
-- Confusion matrix: `[[80  0] [20  0]]`
+    Anscombe, F. J. (1973). 'Graphs in Statistical Analysis'. American
+    Statistician. 27 (1): 17-21. JSTOR 2682899.
 
-## How to reproduce (Colab / local)
-1. Place your dataset CSV in the repo (or in Colab workspace). Update `DATA_FILE` path in `credit_risk_full_code.py` if needed.
-2. Install dependencies:
-```bash
-pip install -r requirements.txt
-# or individually:
-pip install pandas numpy scikit-learn xgboost shap lime matplotlib joblib
+    and our copy was prepared by the
+    [vega_datasets library](https://github.com/altair-viz/vega_datasets/blob/4f67bdaad10f45e3549984e17e1b3088c731503d/vega_datasets/_data/anscombe.json).
